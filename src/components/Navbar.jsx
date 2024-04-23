@@ -35,7 +35,7 @@ const Navbar = () => {
         >
           {!open ? <Hamburger /> : <Cancel />}
         </div>
-       Query Junction
+      College Level Discussion Forum
       </div>
 
       {/* // Search Bar */}
@@ -75,6 +75,7 @@ const Navbar = () => {
               "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRFY677t7F_8Epm50xo5OfqI882l5OBOPKRDxDWeGo7OQ&s"
             }
             alt="profile"
+            title={user?.name || "User"}
             className="
           w-6 h-6
           md:w-7 md:h-7 rounded-full cursor-pointer"

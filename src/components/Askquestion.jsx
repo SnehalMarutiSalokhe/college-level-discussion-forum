@@ -23,13 +23,12 @@ const Askquestion = () => {
     console.log(question);
 
     const res = await axios.post(
-            // "http://localhost:3001/ask-question",
-
+                     
       "https://college-level-discussion-forum-backend.onrender.com/ask-question",
       question
     );
     if (res.status === 201) {
-      toast.success("Question added successfully", (duration = 2000));
+      toast.success("Question added successfully", (duration = 1000));
       setTimeout(() => {
         naviate("/");
       }, 2000);
