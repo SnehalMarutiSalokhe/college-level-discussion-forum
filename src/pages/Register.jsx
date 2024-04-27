@@ -17,10 +17,15 @@ const Register = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    if (password.value !== password_confirmation.value) {
-      toast.error("Password and Confirm Password do not match");
-      return;
-    }
+    // if (password.value !== password_confirmation.value) {
+    //   toast.error("Password and Confirm Password do not match");
+    //   return;
+    // }
+
+     if (password !== password_confirmation) {
+    toast.error("Password and Confirm Password do not match");
+    return;
+  }
 
     const user = {
       name,
