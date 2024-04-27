@@ -22,11 +22,11 @@ const Askquestion = () => {
 
     console.log(question);
 
-    const res = await axios.post(
-                     
+    const res = await axios.post(                     
       "https://college-level-discussion-forum-backend.onrender.com/ask-question",
       question
     );
+    if(question === " " || question === "  " ) res.status = 204
     if (res.status === 201) {
       toast.success("Question added successfully", (duration = 1000));
       setTimeout(() => {
